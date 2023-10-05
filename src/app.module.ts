@@ -10,6 +10,7 @@ import { CategoriaModule } from './categoria/categoria.module';
 import { ConfirmEmailModule } from './confirm-email/confirm-email.module';
 import { LoginSemSenhaModule } from './login-sem-senha/login-sem-senha.module';
 import { ResetPasswordModule } from './reset-password/reset-password.module';
+import { MethodsService } from './services/Methods/Methods.service';
 
 @Module({
   imports: [
@@ -30,7 +31,7 @@ import { ResetPasswordModule } from './reset-password/reset-password.module';
     {
       provide: APP_GUARD,
       useClass: JwtAuthGuard,
-    },
+    }, MethodsService
   ],
 })
 export class AppModule { }

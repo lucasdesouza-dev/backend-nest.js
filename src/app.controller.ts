@@ -8,12 +8,12 @@ import { IsPublic } from './auth/decorators/is-public.decorator';
 @ApiBearerAuth('JWT-auth')
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
   @ApiExcludeEndpoint()
   @IsPublic()
   @Get()
-  getHello(@Res() res){
-   res.status(302).redirect('/api/controle-financeiro');
+  getHello(@Res() res) {
+    res.status(302).redirect('/api/doc');
   }
 
   @Get('me')

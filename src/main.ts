@@ -36,8 +36,8 @@ async function bootstrap() {
       'JWT-auth', // This name here is important for matching up with @ApiBearerAuth() in your controller!
     )
 
-    .setTitle('Api Controle Financeiro')
-    .setDescription('Api designada para aplicacao do Controle Financeiro')
+    .setTitle('Api Nest.js')
+    .setDescription('Template api  com nest.js')
     .setVersion('0.0.1')
 
     .addTag('users')
@@ -51,8 +51,8 @@ async function bootstrap() {
     .addTag('confirm-email')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api/controle-financeiro', app, document, {
-    customSiteTitle: 'Backend Controle-Financeiro',
+  SwaggerModule.setup('api/doc', app, document, {
+    customSiteTitle: 'Backend Nest.js',
     customfavIcon:
       'https://ouch-cdn2.icons8.com/18LP8xCweygbXEHqkjUaa30CQzI_MSpsicHSlRD182U/rs:fit:521:456/extend:false/wm:1:re:0:0:0.8/wmid:ouch/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMzM4/LzU1NGM3NmY3LWNi/ODAtNDdiOC04MjNj/LTZiZGViMTYyNGM1/Yy5zdmc.png',
     // customfavIcon: 'https://avatars.githubusercontent.com/u/6936373?s=200&v=4',
